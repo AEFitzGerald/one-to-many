@@ -64,7 +64,7 @@ public class SchoolController {
 	//------------  Create New Ninja -------
 	
 	@PostMapping("/ninja/create")
-	public String createResident(@Valid @ModelAttribute("ninja") Ninja ninja, BindingResult result, Model model) {
+	public String createNinja(@Valid @ModelAttribute("ninja") Ninja ninja, BindingResult result, Model model) {
 		if(result.hasErrors()) {
 			List<Dojo> allDojos = this.appService.findAllDojos();
 			model.addAttribute("allDojos", allDojos);
